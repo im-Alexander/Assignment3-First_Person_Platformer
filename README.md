@@ -11,3 +11,4 @@ Part B: https://github.com/im-Alexander/Assignment3-First_Person_Platformer/blob
 Part C: https://github.com/im-Alexander/Assignment3-First_Person_Platformer/blob/master/Wireframe_C.jpg
 
 	Blends:
+https://github.com/im-Alexander/Assignment3-First_Person_Platformer/tree/master/Blends
