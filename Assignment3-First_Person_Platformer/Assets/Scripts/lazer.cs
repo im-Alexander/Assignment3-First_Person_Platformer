@@ -6,6 +6,7 @@ public class lazer : MonoBehaviour {
     LineRenderer linerRenderer;
     public ParticleSystem part;
     public AudioSource FiringLaser;
+    public ParticleSystem Explosion;
     // Use this for initialization
     void Start()
     {
@@ -36,9 +37,15 @@ public class lazer : MonoBehaviour {
             {
                 linerRenderer.SetPosition(1, hit.point);
                 Instantiate(this.part, hit.point, Quaternion.identity);
+                if(hit.transform.gameObject.CompareTag("Enemy"))
+                {
+                    Instantiate(this.Explosion, hit.point, Quaternion.identity);
+                    Destroy(hit.transform.gameObject);
+                }
             }
             else
                 linerRenderer.SetPosition(1, ray.GetPoint(100));
+           
 
             yield return null;
         }
